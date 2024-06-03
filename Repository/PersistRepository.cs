@@ -16,10 +16,6 @@ namespace Repository
         public bool Insert(List<Infracao> infracoes)
         {
             bool result = false;
-            Console.WriteLine(infracoes.Count);
-
-
-
             string connectionString = "Data Source=127.0.0.1; Initial Catalog=Radar; User Id=sa; Password=SqlServer2019!; TrustServerCertificate=true;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -73,11 +69,6 @@ namespace Repository
         public List<Infracao> GetAll()
         {
             List<Infracao> infracoes = new List<Infracao>();
-            /*sb.Append("Select Id,");
-            sb.Append("      Name,");
-            sb.Append("      Color,");
-            sb.Append("      Year,");
-            sb.Append(" FROM TB_CAR");*/
             try
             {
                 SqlCommand cmd = new SqlCommand("SELECT concessionaria, ano_do_pnv_snv, tipo_de_radar, rodovia, uf, km_m, municipio, tipo_pista, sentido, situacao, data_da_inativacao, latitude, longitude, velocidade_leve " +

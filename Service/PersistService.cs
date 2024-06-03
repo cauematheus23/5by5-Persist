@@ -14,7 +14,6 @@ namespace Service
 
         public bool Insert(List<Infracao> infracoes)
         {
-            Console.WriteLine("Camada Service");
             return _repository.Insert(infracoes);
         }
         public List<Infracao> GetAll() { return _repository.GetAll(); }
