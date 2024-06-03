@@ -16,8 +16,6 @@ namespace Model
 
         private readonly SqlConnection _conn;
 
-        
-        private static readonly object padlock = new object();
 
         private DataBaseSql()
         {
